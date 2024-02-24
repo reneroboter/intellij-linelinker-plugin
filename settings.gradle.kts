@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "gitlab"
+rootProject.name = "Line Linker"
