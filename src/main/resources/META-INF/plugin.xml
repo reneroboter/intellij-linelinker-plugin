@@ -1,0 +1,53 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.reneroboter.gitlab</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Gitlab</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Register the configurable component for settings -->
+        <projectConfigurable
+                parentId="tools"
+                instance=" com.reneroboter.gitlab.BaseUrlsConfigurable"
+                id="com.example.ProjectSettingsConfigurable"
+                displayName="Renés Helper Project Settings"
+                nonDefaultProject="true"/>
+    </extensions>
+    <actions>
+        <action
+                id="com.reneroboter.gitlab.PopupDialogAction"
+                class="com.reneroboter.gitlab.PopupDialogAction"
+                text="Pop Dialog Action"
+                description="SDK action example"
+                icon="SdkIcons.Sdk_default_icon"
+        >
+            <override-text place="MainMenu" text="Popup Dialog Action"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+        <action id="com.reneroboter.gitlab.GitLabLinkAction" class="com.reneroboter.gitlab.GitLabLinkAction"
+                text="Renés Helper" description="Little helper for get the link on our GitLab">
+            <override-text place="MainMenu" text="Popup Dialog Action"/>
+            <add-to-group group-id="EditorGutterVcsPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
