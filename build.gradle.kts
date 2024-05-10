@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.reneroboter"
-version = "1.0-SNAPSHOT"
+version = "0.1.0-alpha"
 
 repositories {
     mavenCentral()
@@ -42,6 +42,7 @@ tasks {
     }
 
     publishPlugin {
+        channels.set(listOf("alpha"))
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 }

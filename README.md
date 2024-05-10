@@ -26,3 +26,6 @@ Contributions to the Line Linker plugin are welcome! If you encounter any issues
 ## License
 This plugin is licensed under the MIT License.
 
+![Downloads](https://img.shields.io/jetbrains/plugin/d/com.reneroboter.linklinker)
+![Rating](https://img.shields.io/jetbrains/plugin/r/rating/com.reneroboter.linklinker)
+![Version](https://img.shields.io/jetbrains/plugin/v/com.reneroboter.linklinker)
