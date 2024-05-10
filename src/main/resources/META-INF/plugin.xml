@@ -6,15 +6,26 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Line Linker</name>
-
+    <version>0.1.0-alpha</version>
+    <idea-version since-build="2023.1"/>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="linelinker@rene-backhaus.de" url="https://github.com/reneroboter">René Backhaus</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[Line linker quickly creates a link to your Git]]></description>
+    <description><![CDATA[Line linker provide support for easily creating hyperlinks for your Git tracked files to the appropriate Git service.]]></description>
 
+    <change-notes><![CDATA[
+      <h2>0.1.0-alpha</h2><br>
+      <ul>
+        <li>Start using version and release 0.1.0-alpha</li>
+        <li>Update description</li>
+        <li>Add change notes</li>
+        <li>Add support for idea 2023.1</li>
+      </ul>
+    ]]>
+    </change-notes>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
